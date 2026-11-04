@@ -1,0 +1,77 @@
+.gate{max-width:520px;margin:0 auto;padding:34px 16px calc(40px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:14px;text-align:center}
+.gate h1{font-size:clamp(30px,9vw,44px)}.sub{font-size:14px;line-height:2;opacity:.88}
+.sheet{border:2px solid var(--ln);border-radius:6px;padding:10px;background:var(--card);outline:1px solid var(--ln);outline-offset:3px;margin:4px 4px 0;text-align:right}
+.dash{fill:none;stroke:var(--ac);stroke-width:1.6;stroke-dasharray:4 4;animation:sp 12s linear infinite;transform-origin:325px 50px}@keyframes sp{to{transform:rotate(360deg)}}.q{fill:var(--ac);font:800 20px var(--f)!important}.ok #tg{display:none}
+.tb{display:flex;gap:10px;margin-top:8px;border-top:1px solid var(--ln);padding-top:8px}.tb dl{flex:1;display:grid;grid-template-columns:auto 1fr;gap:3px 10px;font-size:11px;align-content:center}.tb dt{font:600 10px ui-monospace,monospace;color:var(--ac);direction:ltr}
+.qr{all:unset;cursor:pointer;display:block;width:104px;text-align:center;font-size:9px;line-height:1.6;color:var(--ink)}.qr img{display:block;width:104px;height:104px;border-radius:6px;background:#fff}
+.tray{display:flex;align-items:center;gap:10px;margin-top:10px;padding-top:8px;border-top:1px dashed var(--bd)}.tray .k{margin:0}
+.ic{width:52px;height:52px;display:grid;place-items:center;border:1px solid var(--bd);border-radius:10px;background:var(--card);touch-action:none}.ic svg{width:34px;height:34px;stroke:var(--ln);fill:none;stroke-width:1.6}.ic.g{opacity:.35}
+#na{cursor:grab;border-color:var(--ac);position:relative;z-index:20;animation:pu 1.8s infinite;transition:transform .3s}#na.drag{animation:none;cursor:grabbing;transition:none}@keyframes pu{50%{box-shadow:0 0 22px var(--ac2)}}
+form{text-align:right}label{font:600 10px ui-monospace,monospace;color:var(--ac);letter-spacing:.2em;direction:ltr;display:block;margin-bottom:6px}
+.row{display:flex;gap:8px}.row input{flex:1;min-width:0;padding:14px;border-radius:14px;border:1px solid var(--bd);background:var(--card);color:var(--ink);font:600 16px var(--f);outline:0;direction:ltr;text-align:center;letter-spacing:.12em}.row input:focus{border-color:var(--ac)}
+.go{padding:0 20px;border-radius:14px;border:0;background:linear-gradient(135deg,var(--ac2),var(--ac));color:#fff;font:800 15px var(--f);cursor:pointer;min-height:48px}
+#err{min-height:3.4em;margin-top:8px;font-size:13px;line-height:1.9;color:var(--ac)}.shake{animation:sh .4s}@keyframes sh{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.vm,.zm{position:fixed;inset:0;z-index:90;display:grid;place-items:center;padding:16px;background:#0a0420ee;opacity:0;visibility:hidden;transition:.4s;text-align:center;color:#fff}.vm.show,.zm.show{opacity:1;visibility:visible}
+.vb{max-width:460px;width:100%;position:relative;padding-top:8px}.vb h2{font-size:20px;margin:8px 0}.vb video{width:100%;max-height:52vh;border-radius:14px;background:#000;margin-top:14px}.x{position:absolute;top:-14px;left:0;width:40px;height:40px;border-radius:50%;border:1px solid #fff5;background:#fff1;color:#fff;font-size:22px;cursor:pointer}
+.zm img{width:min(88vw,420px);border-radius:14px}.zm p{margin-top:12px;font-size:13px;opacity:.85}
+
+
+/* ورود نمایشی شخصیت اختصاصی */
+.entry-scene{position:fixed;inset:0;z-index:120;display:grid;place-items:center;overflow:hidden;
+  padding:20px;background:radial-gradient(ellipse at 72% 45%,#37205f 0,#160d31 48%,#080615 100%);
+  color:#fff;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .45s ease,visibility .45s}
+.entry-scene.show{opacity:1;visibility:visible;pointer-events:auto}
+.entry-scene__glow{position:absolute;width:min(85vw,760px);aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,#a34de533 0,transparent 68%);filter:blur(10px);animation:entryGlow 4s ease-in-out infinite alternate}
+.entry-scene__panel{position:relative;z-index:1;width:min(92vw,600px);min-height:290px;border:1px solid #ffffff26;
+  border-radius:26px;padding:34px 28px;background:linear-gradient(145deg,#ffffff12,#ffffff05);
+  box-shadow:0 24px 90px #0007;backdrop-filter:blur(12px);text-align:center;margin-top:-5vh}
+.entry-scene__tag{display:inline-flex;padding:7px 13px;border:1px solid #d9a5ff66;border-radius:99px;
+  color:#e8c9ff;font-size:11px;letter-spacing:.08em}
+.entry-scene__headline{font-size:clamp(20px,4vw,30px);font-weight:900;margin:17px 0 24px}
+.entry-scene__door{width:100px;height:145px;margin:0 auto 18px;border:2px solid #d4a6ff99;border-bottom:0;
+  border-radius:50px 50px 4px 4px;position:relative;box-shadow:0 0 35px #bd75ff44,inset 0 0 25px #bd75ff22}
+.entry-scene__door:before{content:"";position:absolute;inset:9px 9px 0;border:1px solid #ffffff35;border-radius:42px 42px 0 0}
+.entry-scene__door span{position:absolute;width:7px;height:7px;border-radius:50%;background:#ffe5a6;right:17px;top:76px;box-shadow:0 0 12px #ffe5a6}
+.entry-scene__door i{position:absolute;inset:0;background:linear-gradient(90deg,transparent,#dba8ff44,transparent);transform:translateX(-100%);animation:doorSweep 2.8s ease-in-out infinite}
+.entry-scene__button{display:inline-flex;align-items:center;gap:12px;padding:12px 19px;border-radius:14px;
+  background:linear-gradient(120deg,#a84ee7,#7136bb);box-shadow:0 8px 30px #8d40d866;font-weight:800;font-size:14px}
+.entry-scene__button b{font-size:20px}
+.girl-stage{position:absolute;z-index:3;left:clamp(8px,5vw,70px);bottom:-8px;width:clamp(180px,30vw,270px);
+  transform:translate(-125%,15%) rotate(-8deg);opacity:0;transform-origin:bottom center}
+.entry-scene.show .girl-stage{animation:girlArrive 1.25s cubic-bezier(.18,.8,.2,1) .25s forwards}
+.girl-art{display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(0 14px 24px #0008)}
+.girl-shadow{height:13px;width:65%;margin:-5px auto 0;border-radius:50%;background:#0007;filter:blur(8px)}
+.girl-bubble{position:absolute;z-index:2;right:-18px;top:5%;min-width:110px;padding:10px 13px;border-radius:14px 14px 14px 3px;
+  background:#fff;color:#37204e;text-align:center;font:900 15px ui-sans-serif,system-ui;box-shadow:0 8px 25px #0005;
+  transform:scale(.5);opacity:0}
+.girl-bubble small{display:block;font:700 10px system-ui;margin-top:4px;color:#79538d;white-space:nowrap}
+.entry-scene.show .girl-bubble{animation:bubblePop .45s cubic-bezier(.2,1.5,.4,1) 1.45s forwards}
+.entry-scene__caption{position:absolute;z-index:4;bottom:18px;right:50%;transform:translateX(50%);font-size:12px;color:#e7d5ff;opacity:0}
+.entry-scene.show .entry-scene__caption{animation:captionIn .5s ease 1.7s forwards}
+.entry-scene.show .girl-art{animation:girlTap .7s ease-in-out 1.8s 2}
+@keyframes girlArrive{0%{transform:translate(-125%,15%) rotate(-8deg);opacity:0}75%{transform:translate(8%,0) rotate(3deg);opacity:1}100%{transform:translate(0,0) rotate(0);opacity:1}}
+@keyframes girlTap{0%,100%{transform:rotate(0)}35%{transform:rotate(-5deg) translate(5px,-3px)}70%{transform:rotate(3deg) translate(-2px,1px)}}
+@keyframes bubblePop{to{opacity:1;transform:scale(1)}}
+@keyframes captionIn{to{opacity:.9}}
+@keyframes entryGlow{to{transform:scale(1.15);opacity:.65}}
+@keyframes doorSweep{50%,100%{transform:translateX(100%)}}
+@media(max-width:560px){
+ .entry-scene__panel{min-height:250px;padding:26px 18px;margin-top:-13vh}
+ .girl-stage{left:-8px;width:clamp(165px,46vw,220px);bottom:0}
+ .girl-bubble{right:-12px;top:3%;min-width:90px;padding:8px 10px;font-size:13px}
+ .entry-scene__caption{right:10px;transform:none;bottom:12px;font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){
+ .entry-scene,.entry-scene *{animation:none!important;transition:none!important}
+ .entry-scene.show .girl-stage{transform:translate(0,0);opacity:1}
+ .entry-scene.show .girl-bubble{opacity:1;transform:scale(1)}
+ .entry-scene.show .entry-scene__caption{opacity:1}
+}
+
+/* حرکت دست و واکنش دکمه هم‌زمان می‌شوند تا ضربه واقعاً دیده شود */
+.entry-scene.show .girl-arm{transform-box:fill-box;transform-origin:8% 12%;animation:girlHandTap .72s cubic-bezier(.3,.7,.3,1) 1.85s 2}
+.entry-scene.show .entry-scene__button{animation:buttonPress .72s ease-in-out 2.12s 2}
+@keyframes girlHandTap{0%,100%{transform:rotate(0)}38%{transform:rotate(-13deg) translate(5px,-7px)}68%{transform:rotate(5deg) translate(-2px,2px)}}
+@keyframes buttonPress{0%,100%{transform:scale(1);filter:brightness(1)}42%{transform:scale(.94);filter:brightness(1.55);box-shadow:0 0 0 9px #d9a5ff33,0 8px 35px #c16cffaa}}
+@media(prefers-reduced-motion:reduce){.entry-scene.show .girl-arm,.entry-scene.show .entry-scene__button{animation:none!important}}

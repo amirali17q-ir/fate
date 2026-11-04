@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-t="d"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#170833"><title>اتاق مخفی | ورود</title>
+<link rel="stylesheet" href="assets/theme.css"><link rel="stylesheet" href="assets/gate.css">
+<script>try{document.documentElement.dataset.t=localStorage.getItem('fth')||'d'}catch(e){}</script></head>
+<body><button class="fab" id="thm" aria-label="تغییر تم">🌗</button>
+<main class="gate"><div class="k">THE HIDDEN ROOM · SHEET 01</div>
+<h1>فقط <em>مهندس‌ها</em><br>وارد می‌شن 📐</h1>
+<p class="sub">رمز ورود توی همین نقشه قایم شده. این نقشه یه ایراد مهم داره؛ پیداش کن و درستش کن 🧐</p>
+<section class="sheet" id="sheet"><div id="plan"></div>
+<div class="tb"><dl><dt>PROJECT</dt><dd>اتاق مخفی</dd><dt>DRAWN</dt><dd>علی</dd><dt>SCALE</dt><dd>1:50</dd><dt>SHEET</dt><dd>01 / 05</dd></dl>
+<button class="qr" id="qr" type="button"><img src="assets/riddle-qr.svg" alt="QR معما"><span>QR معما<br>(بزن بزرگ شه)</span></button></div>
+<div class="tray"><span class="k">TEMPLATES</span>
+<div class="ic" id="na" aria-label="شابلون خط شمال"><svg viewBox="0 0 32 32"><circle cx="16" cy="17" r="12"/><path d="M16 7l5 18-5-4-5 4z" fill="currentColor"/></svg></div>
+<div class="ic g"><svg viewBox="0 0 32 32"><path d="M4 28V6M4 6A22 22 0 0 1 26 28"/></svg></div><div class="ic g"><svg viewBox="0 0 32 32"><path d="M3 10h26v12H3zM3 16h26"/></svg></div></div></section>
+<form id="f" autocomplete="off"><label for="pw">ACCESS KEY</label><div class="row"><input id="pw" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="رمز..."><button class="go">ورود ↗</button></div><p id="err" aria-live="polite"></p></form></main>
+
+<div class="entry-scene" id="entryScene" aria-hidden="true">
+  <div class="entry-scene__glow"></div>
+  <div class="entry-scene__panel">
+    <div class="entry-scene__tag">ورود تأیید شد · خوش اومدی</div>
+    <div class="entry-scene__headline">یک مهمون ویژه داره وارد می‌شه...</div>
+    <div class="entry-scene__door" aria-hidden="true"><span></span><i></i></div>
+    <div class="entry-scene__button" id="sceneEnter">ورود به اتاق بعدی <b>←</b></div>
+  </div>
+  <div class="girl-stage" id="girlStage">
+    <div class="girl-bubble">YOU <small>این‌طرفی! بیا بریم ✨</small></div>
+    <svg class="girl-art" viewBox="0 0 260 390" role="img" aria-label="آدمک دختر کارتونی با لباس بنفش">
+      <defs>
+        <linearGradient id="gHair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#25133f"/><stop offset="1" stop-color="#090817"/></linearGradient>
+        <linearGradient id="gDress" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff83c7"/><stop offset="1" stop-color="#a33fe0"/></linearGradient>
+        <linearGradient id="gSkin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffd9c7"/><stop offset="1" stop-color="#e9a98f"/></linearGradient>
+        <filter id="gShadow" x="-40%" y="-30%" width="180%" height="180%"><feDropShadow dx="0" dy="9" stdDeviation="8" flood-color="#09051b" flood-opacity=".35"/></filter>
+      </defs>
+      <g filter="url(#gShadow)" stroke-linecap="round" stroke-linejoin="round">
+        <!-- legs and shoes -->
+        <path d="M104 304 Q98 337 91 355 Q85 368 102 370 L128 370 Q139 366 129 355 L137 310Z" fill="url(#gSkin)" stroke="#9c6170" stroke-width="2"/>
+        <path d="M151 307 Q159 337 163 355 Q164 366 180 369 L201 367 Q210 362 198 354 L180 342 L181 307Z" fill="url(#gSkin)" stroke="#9c6170" stroke-width="2"/>
+        <path d="M89 358 Q76 359 73 371 Q73 380 111 380 Q130 380 132 371 Q131 363 113 360Z" fill="#38234e"/>
+        <path d="M166 357 Q156 365 161 375 Q167 383 204 378 Q215 375 207 365 Q198 358 183 360Z" fill="#38234e"/>
+        <!-- body -->
+        <path d="M91 166 Q70 178 72 218 L65 273 Q63 298 91 310 Q128 328 173 310 Q200 300 194 271 L185 213 Q182 179 158 166Z" fill="url(#gDress)" stroke="#7436a7" stroke-width="3"/>
+        <path d="M93 184 Q130 201 166 184" fill="none" stroke="#ffd5f0" stroke-width="3" opacity=".75"/>
+        <path d="M100 222 Q130 237 166 222" fill="none" stroke="#ffd5f0" stroke-width="2" opacity=".45"/>
+        <path d="M117 169 L129 190 L143 169" fill="none" stroke="#fff0fb" stroke-width="3"/>
+        <!-- arms -->
+        <path d="M82 185 Q58 192 48 219 Q40 240 52 251 Q63 258 72 244 L94 214Z" fill="url(#gSkin)" stroke="#9c6170" stroke-width="3"/>
+        <!-- دستِ اشاره‌گر که موقع ورود ضربه می‌زند -->
+        <g class="girl-arm">
+          <path d="M176 184 Q197 190 207 211 Q218 230 226 216 Q234 204 221 187 Q206 165 184 162Z" fill="url(#gSkin)" stroke="#9c6170" stroke-width="3"/>
+          <path d="M184 180 Q205 160 222 139 Q231 127 239 132 Q247 137 237 151 Q222 177 203 199Z" fill="url(#gSkin)" stroke="#9c6170" stroke-width="3"/>
+          <path d="M235 135 Q244 126 250 130 Q255 135 248 142 L239 149" fill="none" stroke="#9c6170" stroke-width="3"/>
+        </g>
+        <!-- neck -->
+        <path d="M111 143 L111 170 Q130 188 149 168 L147 139Z" fill="url(#gSkin)" stroke="#9c6170" stroke-width="2"/>
+        <!-- موهای بلند و تیره با فرق کج، الهام‌گرفته از عکس -->
+        <path d="M79 101 Q68 35 126 27 Q190 19 198 87 L194 215 Q188 247 171 250 L164 128 L100 130 L95 244 Q73 241 65 207Z" fill="url(#gHair)" stroke="#100b24" stroke-width="3"/>
+        <!-- فرم بیضی و لطیف صورت -->
+        <path d="M86 91 Q87 51 132 47 Q176 48 180 91 L174 132 Q168 160 133 165 Q99 162 92 133Z" fill="url(#gSkin)" stroke="#9c6170" stroke-width="2.5"/>
+        <!-- فرق کج و چتری‌های نرم -->
+        <path d="M81 97 Q75 52 112 34 Q145 18 178 47 Q193 62 185 100 Q170 80 153 70 Q132 86 111 88 Q96 91 81 108Z" fill="url(#gHair)" stroke="#100b24" stroke-width="3"/>
+        <path d="M91 83 Q110 47 145 43 Q163 43 177 59" fill="none" stroke="#72558f" stroke-width="3" opacity=".65"/>
+        <path d="M99 72 Q115 49 136 45" fill="none" stroke="#9b80b6" stroke-width="1.5" opacity=".4"/>
+        <!-- ابروهای پر و چشم‌های درشت و بادامی -->
+        <path d="M99 99 Q110 89 124 98 M143 97 Q158 87 169 98" fill="none" stroke="#24172c" stroke-width="5" stroke-linecap="round"/>
+        <path d="M100 108 Q111 98 125 108 Q114 122 102 112Z" fill="#fffaf5" stroke="#57364a" stroke-width="1.8"/>
+        <path d="M143 107 Q157 97 169 107 Q158 121 145 112Z" fill="#fffaf5" stroke="#57364a" stroke-width="1.8"/>
+        <ellipse cx="113" cy="109" rx="5.2" ry="7" fill="#3d5360"/><ellipse cx="156" cy="108" rx="5.2" ry="7" fill="#3d5360"/>
+        <ellipse cx="114" cy="109" rx="2.3" ry="4.4" fill="#17131e"/><ellipse cx="157" cy="108" rx="2.3" ry="4.4" fill="#17131e"/>
+        <circle cx="115" cy="106" r="1.7" fill="#fff"/><circle cx="158" cy="105" r="1.7" fill="#fff"/>
+        <path d="M100 106 l-4 -3 M104 101 l-3 -4 M165 101 l4 -4" stroke="#332238" stroke-width="1.6" stroke-linecap="round"/>
+        <!-- بینی ظریف و لبخند ملایم -->
+        <path d="M134 111 Q128 126 134 128 Q139 130 142 126" fill="none" stroke="#bd827d" stroke-width="2" stroke-linecap="round"/>
+        <path d="M119 142 Q133 151 148 139 Q135 156 119 142Z" fill="#bd5e70" stroke="#98485d" stroke-width="1.5"/>
+        <path d="M123 142 Q135 145 145 140" fill="none" stroke="#ffe0d7" stroke-width="1.4"/>
+        <ellipse cx="96" cy="128" rx="10" ry="5.5" fill="#f28ca7" opacity=".35"/><ellipse cx="169" cy="127" rx="10" ry="5.5" fill="#f28ca7" opacity=".35"/>
+        <!-- دسته‌های بلند مو در دو طرف صورت -->
+        <path d="M83 83 Q66 120 79 176 Q84 198 98 211 L101 139 Q91 117 96 91Z M180 78 Q198 116 188 174 Q183 198 169 211 L166 137 Q178 111 170 89Z" fill="url(#gHair)" stroke="#100b24" stroke-width="2.5"/>
+        <path d="M77 142 Q78 186 94 202 M188 140 Q188 183 174 201" fill="none" stroke="#72558f" stroke-width="2" opacity=".5"/>
+        <!-- dress decoration -->
+        <path d="M128 263 l5 -10 5 10 10 2 -8 7 2 11 -9 -6 -9 6 2 -11 -8 -7Z" fill="#ffe58c" opacity=".9"/>
+      </g>
+    </svg>
+    <div class="girl-shadow"></div>
+  </div>
+  <div class="entry-scene__caption">فاطمه، بزن بریم! 💜</div>
+</div>
+
+<div class="vm" id="vm"><div class="vb"><button class="x" id="vx" type="button">×</button><div class="k c">THREE STRIKES</div><h2>فکر کنم این رمز، مال تو نیست!</h2><p>سه بار تلاش کردی... اینم سورپرایز مخصوص این لحظه.</p><video id="vd" controls playsinline preload="none"><source src="media/after-three-mistakes.mp4" type="video/mp4"></video></div></div>
+<div class="zm" id="zm"><div><img src="assets/riddle-qr.svg" alt="QR"><p>اسکرین‌شات بگیر و با Google Lens یا اسکنر گالری بخونش، یا با گوشی دیگه اسکن کن 📷</p></div></div>
+<script src="assets/common.js"></script><script src="assets/gate.js"></script></body></html>
